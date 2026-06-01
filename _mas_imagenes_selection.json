@@ -1,0 +1,88 @@
+{
+  "selected": [
+    {
+      "filename": "WhatsApp Image 2026-05-27 at 9.28.11 PM.jpeg",
+      "why": "Muestra mobiliario exterior premium en terraza de hotel; composición limpia y contexto hotelero fuerte.",
+      "slot_es": "mobiliario exterior > cama balinesa",
+      "slot_en": "outdoor furniture > balinese bed"
+    },
+    {
+      "filename": "WhatsApp Image 2026-05-27 at 9.28.12 PM (1).jpeg",
+      "why": "Demuestra capacidad de instalación a medida en hotelería costera; añade valor mediante imagen de proceso controlado.",
+      "slot_es": "instalación > cabana playa",
+      "slot_en": "installation > beach cabana"
+    },
+    {
+      "filename": "WhatsApp Image 2026-05-27 at 9.28.12 PM (2).jpeg",
+      "why": "Producto terminado en playa, iluminación natural y contexto que transmite lujo.",
+      "slot_es": "mobiliario exterior > cama balinesa cabana playa",
+      "slot_en": "outdoor furniture > balinese bed cabana beach"
+    },
+    {
+      "filename": "WhatsApp Image 2026-05-27 at 9.28.13 PM (1).jpeg",
+      "why": "Muestra instalación de mobiliario de playa con uso real y escala.",
+      "slot_es": "instalación > camastro playa",
+      "slot_en": "installation > beach daybed"
+    },
+    {
+      "filename": "WhatsApp Image 2026-05-27 at 9.29.07 PM.jpeg",
+      "why": "Representa mobiliario de lobby en un entorno real de hotel; tono neutro y composición sólida.",
+      "slot_es": "mobiliario de hotel > sillon lobby",
+      "slot_en": "hotel furniture > lobby sofa"
+    },
+    {
+      "filename": "WhatsApp Image 2026-05-27 at 9.29.08 PM (4).jpeg",
+      "why": "Producto neutro y versátil para catálogos de mobiliario; fondo limpio facilita uso editorial.",
+      "slot_es": "silla > silla tapizada con respaldo ovalado",
+      "slot_en": "chair > upholstered chair with oval back"
+    },
+    {
+      "filename": "WhatsApp Image 2026-05-27 at 9.31.45 PM.jpeg",
+      "why": "Evidencia instalación de mobiliario exterior; muestra capacidad operativa en entorno real.",
+      "slot_es": "instalación exterior > camastros",
+      "slot_en": "exterior installation > outdoor loungers"
+    },
+    {
+      "filename": "WhatsApp Image 2026-05-27 at 9.32.34 PM (2).jpeg",
+      "why": "Composición atractiva y uso real; buen contexto para mobiliario de lujo en resort.",
+      "slot_es": "mobiliario exterior > cama balinesa con dosel",
+      "slot_en": "outdoor furniture > balinese canopy bed"
+    }
+  ],
+  "rejected": [
+    {
+      "filename": "WhatsApp Image 2026-05-27 at 9.28.12 PM.jpeg",
+      "why": "Duplicado de ángulo similar; ya se cubre con 9.28.12 PM (1).jpeg"
+    },
+    {
+      "filename": "WhatsApp Image 2026-05-27 at 9.31.44 PM.jpeg",
+      "why": "Tumbonas con coche al fondo; background distrae para galería de producto"
+    },
+    {
+      "filename": "WhatsApp Image 2026-05-27 at 9.29.08 PM.jpeg",
+      "why": "Silla/lounge con fondo de showroom y coche distrae; mejor usar versión sin fondo distrayente"
+    },
+    {
+      "filename": "WhatsApp Image 2026-05-27 at 9.32.33 PM (1).jpeg",
+      "why": "Proceso de instalación en jardín; no es imagen de producto terminado"
+    },
+    {
+      "filename": "WhatsApp Image 2026-05-27 at 9.32.33 PM (2).jpeg",
+      "why": "Segunda toma de instalación en proceso; similar y no añade valor adicional"
+    },
+    {
+      "filename": "WhatsApp Image 2026-05-27 at 9.32.34 PM (1).jpeg",
+      "why": "Proceso/instalación con herramientas visibles; demasiado desorden para galería"
+    },
+    {
+      "filename": "WhatsApp Image 2026-05-27 at 9.29.08 PM (3).jpeg",
+      "why": "Repetición de escena con background distractor"
+    }
+  ],
+  "notes": [
+    "Priorizar una imagen por tipo de grupo duplicado para evitar saturar la galería.",
+    "Eliminar elementos distractores (personas no autorizadas, coches, carteles de seguridad) para tomas de producto puro.",
+    "Las imágenes de instalación deben ir acompañadas por tomas terminadas para mostrar capacidad operativa y resultado final.",
+    "Verificar resoluciones y recortes para mantener balance visual y coherencia de color."
+  ]
+}
