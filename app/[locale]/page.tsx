@@ -296,10 +296,12 @@ export default async function LocalePage({ params }: PageProps) {
                     <p className="mt-1 text-white/62">{card.role}</p>
                   </div>
                   <div className="flex gap-2">
-                    <a href={whatsappUrl(locale, card.contact)} target="_blank" rel="noreferrer" aria-label={`WhatsApp ${card.name}`} className="flex h-11 w-11 items-center justify-center rounded-full bg-caribe-teal text-white transition hover:bg-caribe-gold hover:text-caribe-deep">
-                      <MessageCircle className="h-5 w-5" />
-                    </a>
-                    <a href={mailtoUrl(locale, card.contact)} aria-label={`Email ${card.name}`} className="flex h-11 w-11 items-center justify-center rounded-full bg-white/12 text-white transition hover:bg-white hover:text-caribe-navy">
+                    {card.contact ? (
+                      <a href={whatsappUrl(locale, card.contact)} target="_blank" rel="noreferrer" aria-label={`WhatsApp ${card.name}`} className="flex h-11 w-11 items-center justify-center rounded-full bg-caribe-teal text-white transition hover:bg-caribe-gold hover:text-caribe-deep">
+                        <MessageCircle className="h-5 w-5" />
+                      </a>
+                    ) : null}
+                    <a href={mailtoUrl(locale, card.email)} aria-label={`Email ${card.name}`} className="flex h-11 w-11 items-center justify-center rounded-full bg-white/12 text-white transition hover:bg-white hover:text-caribe-navy">
                       <Mail className="h-5 w-5" />
                     </a>
                   </div>
@@ -309,9 +311,9 @@ export default async function LocalePage({ params }: PageProps) {
                     <Phone className="h-4 w-4 text-caribe-gold" />
                     {card.phone}
                   </a>
-                  <a href={`mailto:${card.email}`} className="flex items-center gap-2 rounded-2xl bg-white/8 px-4 py-3 transition hover:bg-white/12">
-                    <Mail className="h-4 w-4 text-caribe-gold" />
-                    {card.email}
+                  <a href={`mailto:${card.email}`} className="flex min-w-0 items-center gap-2 rounded-2xl bg-white/8 px-4 py-3 transition hover:bg-white/12">
+                    <Mail className="h-4 w-4 flex-none text-caribe-gold" />
+                    <span className="min-w-0 break-all">{card.email}</span>
                   </a>
                 </div>
               </article>
@@ -332,7 +334,13 @@ export default async function LocalePage({ params }: PageProps) {
                 <div>
                   <p className="text-sm font-bold">{t.footer.office}</p>
                   <p className="mt-1 text-sm leading-6 text-white/76">{brand.address}</p>
-                  <p className="mt-1 text-sm leading-6 text-white/76">{brand.phoneOffice}</p>
+                  <div className="mt-1 flex flex-col text-sm leading-6 text-white/76">
+                    {[brand.phoneOffice, brand.phoneOfficeAdditional].map((phone) => (
+                      <a key={phone} href={`tel:${phone.replace(/\s/g, "")}`} className="w-fit hover:text-white">
+                        {phone}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -496,9 +504,13 @@ function Footer({ locale }: { locale: Locale }) {
           </div>
         </div>
         <div className="flex flex-wrap gap-3 text-sm text-white/68">
+          <a href={`tel:${brand.phoneGeneral.replace(/\s/g, "")}`} className="hover:text-white">{brand.phoneGeneral}</a>
+          <span>/</span>
+          <a href={`tel:${brand.phoneAdmin.replace(/\s/g, "")}`} className="hover:text-white">{brand.phoneAdmin}</a>
+          <span>/</span>
           <a href={`tel:${brand.phoneOffice.replace(/\s/g, "")}`} className="hover:text-white">{brand.phoneOffice}</a>
           <span>/</span>
-          <a href={`mailto:${brand.emailCommercial}`} className="hover:text-white">{brand.emailCommercial}</a>
+          <a href={`mailto:${brand.emailQuotes}`} className="hover:text-white">{brand.emailQuotes}</a>
           <span>/</span>
           <span>© {new Date().getFullYear()} {t.footer.rights}</span>
         </div>

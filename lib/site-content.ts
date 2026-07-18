@@ -17,16 +17,25 @@ export const brand = {
   logoMark: "/assets/logos/logo-sin-texto.png",
   emailCommercial: "alfadecomc@yahoo.com",
   emailAdmin: "romedecomc@yahoo.com",
+  emailQuotes: "romedecom@yahoo.com",
+  emailGeneral: "victor_romero_gte@hotmail.com",
   phoneCommercial: "+52 462 116 7170",
   phoneAdmin: "+52 462 653 7417",
+  phoneGeneral: "+52 998 105 1884",
   phoneOffice: "+52 998 124 9319",
+  phoneOfficeAdditional: "+52 998 121 7861",
   whatsappCommercial: "524621167170",
   whatsappAdmin: "524626537417",
-  address: "MZ 94 MZA. 66 Lote 12 No. 1077, Cancún, Q. Roo, C.P. 77517",
+  whatsappGeneral: "529981051884",
+  address: "Calle 24 Poniente, Manzana 66, Lote 12, No. 1077, Región 94, Cancún, Quintana Roo, C.P. 77517",
 };
 
-export function whatsappUrl(locale: Locale, contact: "commercial" | "admin" = "admin") {
-  const phone = contact === "admin" ? brand.whatsappAdmin : brand.whatsappCommercial;
+export function whatsappUrl(locale: Locale, contact: "commercial" | "admin" | "general" = "admin") {
+  const phone = {
+    commercial: brand.whatsappCommercial,
+    admin: brand.whatsappAdmin,
+    general: brand.whatsappGeneral,
+  }[contact];
   const message =
     locale === "es"
       ? "Hola, me gustaría cotizar un proyecto con Decoración y Multiservicios del Caribe. Tipo de espacio: hotel/residencial/comercio. Servicio requerido:"
@@ -35,8 +44,7 @@ export function whatsappUrl(locale: Locale, contact: "commercial" | "admin" = "a
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 }
 
-export function mailtoUrl(locale: Locale, target: "commercial" | "admin" = "commercial") {
-  const email = target === "commercial" ? brand.emailCommercial : brand.emailAdmin;
+export function mailtoUrl(locale: Locale, email: string = brand.emailQuotes) {
   const subject = locale === "es" ? "Solicitud de cotización" : "Quote request";
   const body =
     locale === "es"
@@ -62,7 +70,7 @@ export const content = {
     languageLabel: "English",
     hero: {
       eyebrow: "Cancún, Cozumel e Isla Mujeres",
-      title: "Confección, reparación e instalación para hoteles del Caribe Mexicano",
+      title: "Confección, reparación e instalación para hoteles y residencias del Caribe Mexicano",
       body:
         "Soluciones de confección, reparación, instalación y mantenimiento para hoteles, residenciales exclusivos, restaurantes, oficinas y espacios comerciales del Caribe Mexicano.",
       primary: "Cotizar por WhatsApp",
@@ -205,7 +213,8 @@ export const content = {
       checklistTitle: "Datos útiles para cotizar",
       checklist: ["Ubicación del inmueble", "Fotos del área o pieza", "Medidas o cantidad", "Material o color deseado", "Fecha ideal de entrega"],
       cards: [
-        { name: "José Antonio Alfaro", role: "Gerente comercial", phone: brand.phoneCommercial, email: brand.emailCommercial, contact: "commercial" },
+        { name: "Lic. Víctor Manuel Romero Álvarez", role: "Gerente general", phone: brand.phoneGeneral, email: brand.emailGeneral, contact: "general" },
+        { name: "José Antonio Alfaro Ahuatzin", role: "Gerente comercial", phone: brand.phoneCommercial, email: brand.emailCommercial, contact: "commercial" },
         { name: "Esperanza Mónica Romero", role: "Gerente administrativa", phone: brand.phoneAdmin, email: brand.emailAdmin, contact: "admin" },
       ],
     },
@@ -230,7 +239,7 @@ export const content = {
     languageLabel: "Español",
     hero: {
       eyebrow: "Cancun, Cozumel and Isla Mujeres",
-      title: "Soft furnishing, repairs & installation for Caribbean hotels",
+      title: "Soft furnishing, repairs & installation for Caribbean hotels and residences",
       body:
         "Fabrication, repair, installation and maintenance solutions for hotels, exclusive residences, restaurants, offices and commercial spaces in the Mexican Caribbean.",
       primary: "Quote on WhatsApp",
@@ -373,7 +382,8 @@ export const content = {
       checklistTitle: "Helpful quote details",
       checklist: ["Property location", "Photos of the area or piece", "Measurements or quantity", "Preferred material or color", "Ideal delivery date"],
       cards: [
-        { name: "José Antonio Alfaro", role: "Commercial manager", phone: brand.phoneCommercial, email: brand.emailCommercial, contact: "commercial" },
+        { name: "Lic. Víctor Manuel Romero Álvarez", role: "General manager", phone: brand.phoneGeneral, email: brand.emailGeneral, contact: "general" },
+        { name: "José Antonio Alfaro Ahuatzin", role: "Commercial manager", phone: brand.phoneCommercial, email: brand.emailCommercial, contact: "commercial" },
         { name: "Esperanza Mónica Romero", role: "Administrative manager", phone: brand.phoneAdmin, email: brand.emailAdmin, contact: "admin" },
       ],
     },
