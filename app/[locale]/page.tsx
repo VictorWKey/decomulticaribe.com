@@ -104,7 +104,7 @@ export default async function LocalePage({ params }: PageProps) {
   return (
     <main className="min-h-screen bg-caribe-shell text-caribe-ink">
       <Header locale={locale} alternateLocale={alternateLocale} />
-      <Hero locale={locale} serviceId={serviceId} />
+      <Hero locale={locale} serviceId={serviceId} contactId={contactId} />
 
       <section className="relative overflow-hidden px-5 py-18 sm:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
@@ -393,8 +393,11 @@ function Header({ locale, alternateLocale }: { locale: Locale; alternateLocale: 
   );
 }
 
-function Hero({ locale, serviceId }: { locale: Locale; serviceId: string }) {
+function Hero({ locale, serviceId, contactId }: { locale: Locale; serviceId: string; contactId: string }) {
   const t = content[locale];
+  const representativeLabel = locale === "es" ? "Gerencia general" : "General management";
+  const contactsLabel = locale === "es" ? "Contactos y ubicación" : "Contacts and location";
+
   return (
     <section className="relative overflow-hidden bg-caribe-shell px-5 pb-16 pt-32 sm:px-8 lg:px-12">
       <div className="relative mx-auto max-w-7xl">
@@ -403,14 +406,20 @@ function Hero({ locale, serviceId }: { locale: Locale; serviceId: string }) {
           {/* LEFT — logo + pills + stats */}
           <div className="flex flex-col items-start gap-6">
             {/* Location + year pills */}
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-caribe-teal/12 px-3 py-1 text-xs font-black uppercase tracking-[0.2em] text-caribe-teal">
-                <MapPin className="h-3 w-3" />
-                {t.hero.eyebrow}
-              </span>
-              <span className="rounded-full bg-caribe-navy px-3 py-1 text-xs font-semibold text-white">
-                {locale === "es" ? "Desde 1993" : "Est. 1993"}
-              </span>
+            <div className="space-y-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-caribe-teal/12 px-3 py-1 text-xs font-black uppercase tracking-[0.2em] text-caribe-teal">
+                  <MapPin className="h-3 w-3" />
+                  {t.hero.eyebrow}
+                </span>
+                <span className="rounded-full bg-caribe-navy px-3 py-1 text-xs font-semibold text-white">
+                  {locale === "es" ? "Desde 1993" : "Est. 1993"}
+                </span>
+              </div>
+              <p className="inline-flex items-center gap-2 text-[0.72rem] font-semibold tracking-[0.04em] text-caribe-navy/65 sm:text-xs">
+                <ShieldCheck className="h-4 w-4 flex-none text-caribe-teal" aria-hidden="true" />
+                <span>{representativeLabel} · Lic. Víctor Manuel Romero Álvarez</span>
+              </p>
             </div>
 
             {/* Logo — mix-blend-mode:multiply makes white pixels invisible on light bg */}
@@ -460,6 +469,14 @@ function Hero({ locale, serviceId }: { locale: Locale; serviceId: string }) {
                 <ArrowRight className="h-5 w-5" />
               </a>
             </div>
+            <a
+              href={`#${contactId}`}
+              className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-caribe-navy/62 underline-offset-4 transition hover:text-caribe-teal hover:underline"
+            >
+              <MapPin className="h-4 w-4" />
+              {contactsLabel}
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
 
         </div>
