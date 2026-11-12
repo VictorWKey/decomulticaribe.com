@@ -15,23 +15,19 @@ export const brand = {
   logoHorizontal: "/assets/logos/logo-completo-texto-derecha.png",
   logoStacked: "/assets/logos/logo-completo-texto-abajo.png",
   logoMark: "/assets/logos/logo-sin-texto.png",
-  emailCommercial: "alfadecomc@yahoo.com",
   emailAdmin: "romedecomc@yahoo.com",
   emailGeneral: "victor_romero_gte@hotmail.com",
-  phoneCommercial: "+52 462 116 7170",
   phoneAdmin: "+52 462 653 7417",
   phoneGeneral: "+52 998 105 1884",
   phoneOffice: "+52 998 124 9319",
   phoneOfficeAdditional: "+52 998 121 7861",
-  whatsappCommercial: "524621167170",
   whatsappAdmin: "524626537417",
   whatsappGeneral: "529981051884",
   address: "Calle 24 Poniente, Manzana 66, Lote 12, No. 1077, Región 94, Cancún, Quintana Roo, C.P. 77517",
 };
 
-export function whatsappUrl(locale: Locale, contact: "commercial" | "admin" | "general" = "general") {
+export function whatsappUrl(locale: Locale, contact: "admin" | "general" = "general") {
   const phone = {
-    commercial: brand.whatsappCommercial,
     admin: brand.whatsappAdmin,
     general: brand.whatsappGeneral,
   }[contact];
@@ -213,7 +209,6 @@ export const content = {
       checklist: ["Ubicación del inmueble", "Fotos del área o pieza", "Medidas o cantidad", "Material o color deseado", "Fecha ideal de entrega"],
       cards: [
         { name: "Lic. Víctor Manuel Romero Álvarez", role: "Gerente general", phone: brand.phoneGeneral, email: brand.emailGeneral, contact: "general" },
-        { name: "José Antonio Alfaro Ahuatzin", role: "Gerente comercial", phone: brand.phoneCommercial, email: brand.emailCommercial, contact: "commercial" },
         { name: "Esperanza Mónica Romero", role: "Gerente administrativa", phone: brand.phoneAdmin, email: brand.emailAdmin, contact: "admin" },
       ],
     },
@@ -382,7 +377,6 @@ export const content = {
       checklist: ["Property location", "Photos of the area or piece", "Measurements or quantity", "Preferred material or color", "Ideal delivery date"],
       cards: [
         { name: "Lic. Víctor Manuel Romero Álvarez", role: "General manager", phone: brand.phoneGeneral, email: brand.emailGeneral, contact: "general" },
-        { name: "José Antonio Alfaro Ahuatzin", role: "Commercial manager", phone: brand.phoneCommercial, email: brand.emailCommercial, contact: "commercial" },
         { name: "Esperanza Mónica Romero", role: "Administrative manager", phone: brand.phoneAdmin, email: brand.emailAdmin, contact: "admin" },
       ],
     },
