@@ -208,8 +208,8 @@ export const content = {
       checklistTitle: "Datos útiles para cotizar",
       checklist: ["Ubicación del inmueble", "Fotos del área o pieza", "Medidas o cantidad", "Material o color deseado", "Fecha ideal de entrega"],
       cards: [
-        { name: "Lic. Víctor Manuel Romero Álvarez", role: "Gerente general", phone: brand.phoneGeneral, email: brand.emailGeneral, contact: "general" },
-        { name: "Esperanza Mónica Romero", role: "Gerente administrativa", phone: brand.phoneAdmin, email: brand.emailAdmin, contact: "admin" },
+        { name: "Lic. Víctor Romero", role: "Gerente general", phone: brand.phoneGeneral, email: brand.emailGeneral, contact: "general" },
+        { name: "Esperanza Romero", role: "Gerente administrativa", phone: brand.phoneAdmin, email: brand.emailAdmin, contact: "admin" },
       ],
     },
     footer: {
@@ -376,8 +376,8 @@ export const content = {
       checklistTitle: "Helpful quote details",
       checklist: ["Property location", "Photos of the area or piece", "Measurements or quantity", "Preferred material or color", "Ideal delivery date"],
       cards: [
-        { name: "Lic. Víctor Manuel Romero Álvarez", role: "General manager", phone: brand.phoneGeneral, email: brand.emailGeneral, contact: "general" },
-        { name: "Esperanza Mónica Romero", role: "Administrative manager", phone: brand.phoneAdmin, email: brand.emailAdmin, contact: "admin" },
+        { name: "Lic. Víctor Romero", role: "General manager", phone: brand.phoneGeneral, email: brand.emailGeneral, contact: "general" },
+        { name: "Esperanza Romero", role: "Administrative manager", phone: brand.phoneAdmin, email: brand.emailAdmin, contact: "admin" },
       ],
     },
     footer: {

@@ -280,9 +280,12 @@ export default async function LocalePage({ params }: PageProps) {
                 <MessageCircle className="h-5 w-5" />
                 {t.contact.whatsapp}
               </a>
-              <a href={mailtoUrl(locale)} className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-4 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/16">
-                <Mail className="h-5 w-5" />
-                {t.contact.email}
+              <a href={mailtoUrl(locale)} className="inline-flex min-w-0 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-4 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/16">
+                <Mail className="h-5 w-5 shrink-0" />
+                <span className="min-w-0 text-center">
+                  <span className="block">{t.contact.email}</span>
+                  <span className="block break-all text-xs font-medium text-white/75">{brand.emailGeneral}</span>
+                </span>
               </a>
             </div>
           </div>
@@ -418,7 +421,7 @@ function Hero({ locale, serviceId, contactId }: { locale: Locale; serviceId: str
               </div>
               <p className="inline-flex items-center gap-2 text-[0.72rem] font-semibold tracking-[0.04em] text-caribe-navy/65 sm:text-xs">
                 <ShieldCheck className="h-4 w-4 flex-none text-caribe-teal" aria-hidden="true" />
-                <span>{representativeLabel} · Lic. Víctor Manuel Romero Álvarez</span>
+                <span>{representativeLabel} · Lic. Víctor Romero</span>
               </p>
             </div>
 
