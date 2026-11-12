@@ -17,7 +17,6 @@ export const brand = {
   logoMark: "/assets/logos/logo-sin-texto.png",
   emailCommercial: "alfadecomc@yahoo.com",
   emailAdmin: "romedecomc@yahoo.com",
-  emailQuotes: "romedecom@yahoo.com",
   emailGeneral: "victor_romero_gte@hotmail.com",
   phoneCommercial: "+52 462 116 7170",
   phoneAdmin: "+52 462 653 7417",
@@ -30,7 +29,7 @@ export const brand = {
   address: "Calle 24 Poniente, Manzana 66, Lote 12, No. 1077, Región 94, Cancún, Quintana Roo, C.P. 77517",
 };
 
-export function whatsappUrl(locale: Locale, contact: "commercial" | "admin" | "general" = "admin") {
+export function whatsappUrl(locale: Locale, contact: "commercial" | "admin" | "general" = "general") {
   const phone = {
     commercial: brand.whatsappCommercial,
     admin: brand.whatsappAdmin,
@@ -44,7 +43,7 @@ export function whatsappUrl(locale: Locale, contact: "commercial" | "admin" | "g
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 }
 
-export function mailtoUrl(locale: Locale, email: string = brand.emailQuotes) {
+export function mailtoUrl(locale: Locale, email: string = brand.emailGeneral) {
   const subject = locale === "es" ? "Solicitud de cotización" : "Quote request";
   const body =
     locale === "es"
@@ -207,7 +206,7 @@ export const content = {
       title: "Manda fotos, medidas aproximadas o agenda una visita",
       body:
         "Para responder mejor, incluye ubicación, tipo de espacio, servicio que necesitas, cantidad de piezas, medidas aproximadas y si buscas reparación, fabricación nueva o instalación.",
-      whatsapp: "WhatsApp comercial",
+      whatsapp: "WhatsApp de Víctor",
       email: "Enviar correo",
       call: "Llamar",
       checklistTitle: "Datos útiles para cotizar",
@@ -376,7 +375,7 @@ export const content = {
       title: "Send photos, approximate measurements or schedule a site visit",
       body:
         "For a faster response, include location, property type, service needed, number of pieces, approximate measurements and whether you need repair, new fabrication or installation.",
-      whatsapp: "Commercial WhatsApp",
+      whatsapp: "Victor on WhatsApp",
       email: "Send email",
       call: "Call",
       checklistTitle: "Helpful quote details",

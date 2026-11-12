@@ -527,7 +527,7 @@ function Footer({ locale }: { locale: Locale }) {
           <span>/</span>
           <a href={`tel:${brand.phoneOffice.replace(/\s/g, "")}`} className="hover:text-white">{brand.phoneOffice}</a>
           <span>/</span>
-          <a href={`mailto:${brand.emailQuotes}`} className="hover:text-white">{brand.emailQuotes}</a>
+          <a href={`mailto:${brand.emailGeneral}`} className="hover:text-white">{brand.emailGeneral}</a>
           <span>/</span>
           <span>© {new Date().getFullYear()} {t.footer.rights}</span>
         </div>
