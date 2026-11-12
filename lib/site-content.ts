@@ -202,7 +202,7 @@ export const content = {
       title: "Manda fotos, medidas aproximadas o agenda una visita",
       body:
         "Para responder mejor, incluye ubicación, tipo de espacio, servicio que necesitas, cantidad de piezas, medidas aproximadas y si buscas reparación, fabricación nueva o instalación.",
-      whatsapp: "WhatsApp de Víctor",
+      whatsapp: "WhatsApp",
       email: "Enviar correo",
       call: "Llamar",
       checklistTitle: "Datos útiles para cotizar",
@@ -370,7 +370,7 @@ export const content = {
       title: "Send photos, approximate measurements or schedule a site visit",
       body:
         "For a faster response, include location, property type, service needed, number of pieces, approximate measurements and whether you need repair, new fabrication or installation.",
-      whatsapp: "Victor on WhatsApp",
+      whatsapp: "WhatsApp",
       email: "Send email",
       call: "Call",
       checklistTitle: "Helpful quote details",
