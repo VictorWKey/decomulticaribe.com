@@ -23,7 +23,7 @@ export const brand = {
   phoneOfficeAdditional: "+52 998 121 7861",
   whatsappAdmin: "524626537417",
   whatsappGeneral: "529981051884",
-  address: "Calle 24 Poniente, Manzana 66, Lote 12, No. 1077, Región 94, Cancún, Quintana Roo, C.P. 77517",
+  address: "Calle 24 Poniente, Manzana 66, No. 1077, Supermanzana 94, Cancún, Quintana Roo, C.P. 77517",
 };
 
 export function whatsappUrl(locale: Locale, contact: "admin" | "general" = "general") {
