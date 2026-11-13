@@ -337,13 +337,9 @@ export default async function LocalePage({ params }: PageProps) {
                 <div>
                   <p className="text-sm font-bold">{t.footer.office}</p>
                   <p className="mt-1 text-sm leading-6 text-white/76">{brand.address}</p>
-                  <div className="mt-1 flex flex-col text-sm leading-6 text-white/76">
-                    {[brand.phoneOffice, brand.phoneOfficeAdditional].map((phone) => (
-                      <a key={phone} href={`tel:${phone.replace(/\s/g, "")}`} className="w-fit hover:text-white">
-                        {phone}
-                      </a>
-                    ))}
-                  </div>
+                  <a href={`tel:${brand.phoneOffice.replace(/\s/g, "")}`} className="mt-1 block w-fit text-sm leading-6 text-white/76 hover:text-white">
+                    {brand.phoneOffice}
+                  </a>
                 </div>
               </div>
             </div>
